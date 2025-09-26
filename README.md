@@ -77,6 +77,10 @@ If R1 fails, R2 automatically takes over the gateway role using preempt.
 - **Conclusion**  
 
 ---
+## 📂 Configuration Files
+- [R1 Configuration](./R1.txt)
+- [R2 Configuration](./R2.txt)
+
 
 
 
