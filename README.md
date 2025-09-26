@@ -41,22 +41,42 @@ Gi0/0       1    90   Standby 192.168.1.1     local           192.168.1.254
 
 ## 🗺️ Topology
 
-          +-------------+
-          |     R1      |
-          | 192.168.1.1 |
-          +-------------+
-                |
-                | HSRP Virtual IP: 192.168.1.254
-                |
-          +-------------+
-          |     R2      |
-          | 192.168.1.2 |
-          +-------------+
-                |
-          +-------------+
-          |     PC      |
-          | DG: 192.168.1.254 |
-          +-------------+
+   +-------------+            +-------------+
+   |     R1      |            |     R2      |
+   | 192.168.1.1 |            | 192.168.1.2 |
+   +-------------+            +-------------+
+           \                        /
+            \                      /
+             \                    /
+              +------------------+
+              |   Virtual IP     |
+              |  192.168.1.254   |
+              +------------------+
+
+
+🎯 Conclusion
+
+R1 becomes Active (higher priority = 110).
+
+R2 becomes Standby (priority = 90).
+
+If R1 fails, R2 automatically takes over the gateway role using preempt.
+
+
+✍️ Author: Arepalli Kishore
+📌 Repo: https://github.com/yourusername/cisco-hsrp-lab
+
+
+---
+
+✅ This version includes:  
+- Clear **overview**  
+- Full **configurations** (R1 & R2)  
+- **Verification** + sample output  
+- An **ASCII topology diagram**  
+- **Conclusion**  
+
+---
 
 
 
