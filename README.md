@@ -18,3 +18,12 @@ interface g0/0
  standby 1 priority 110
  standby 1 preempt
  no shutdown
+
+### R2
+```bash
+interface g0/0
+ ip address 192.168.1.2 255.255.255.0
+ standby 1 ip 192.168.1.254
+ standby 1 priority 90
+ standby 1 preempt
+ no shutdown
